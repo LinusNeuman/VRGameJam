@@ -6,6 +6,19 @@ public class torch : MonoBehaviour {
     [SerializeField]
     private bool litAsFuck;
 
+    public bool GetLit()
+    {
+        return litAsFuck;
+    }
+
+    void OnTriggerEnter(Collider aCollider)
+    {
+        if(aCollider.tag == "Lighter")
+        {
+            litAsFuck = true;
+        }
+    }
+
 	// Use this for initialization
 	void Start ()
     {
@@ -15,9 +28,5 @@ public class torch : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-	    if(litAsFuck == true)
-        {
-
-        }
 	}
 }

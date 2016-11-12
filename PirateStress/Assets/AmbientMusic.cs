@@ -16,6 +16,7 @@ public class AmbientMusic : MonoBehaviour {
         myAudioSource = GetComponent<AudioSource>();
         myAudioSource.playOnAwake = false;
         myAudioSource.clip = myWaves;
+        myAudioSource.loop = true;
         myAudioSource.Play();
 
       //  myAudioSource.clip = mySeagulls;
