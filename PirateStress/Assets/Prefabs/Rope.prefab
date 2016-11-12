@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013115753990}
   - 54: {fileID: 54000010690290574}
-  - 136: {fileID: 136000012225033958}
+  - 136: {fileID: 136000013578398732}
   m_Layer: 0
   m_Name: joint16
   m_TagString: Untagged
@@ -37,7 +37,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012975413554}
   - 54: {fileID: 54000013299035302}
-  - 136: {fileID: 136000012011806958}
+  - 136: {fileID: 136000011157695924}
   m_Layer: 0
   m_Name: joint15
   m_TagString: Untagged
@@ -69,7 +69,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012989024084}
   - 54: {fileID: 54000012971701116}
-  - 136: {fileID: 136000011783563130}
+  - 136: {fileID: 136000011316939002}
   m_Layer: 0
   m_Name: joint13
   m_TagString: Untagged
@@ -86,8 +86,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012979104046}
   - 54: {fileID: 54000010779979838}
-  - 136: {fileID: 136000013590256076}
   - 114: {fileID: 114000013050715820}
+  - 136: {fileID: 136000011142246658}
   m_Layer: 0
   m_Name: joint10
   m_TagString: Untagged
@@ -138,7 +138,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010870496810}
   - 54: {fileID: 54000010786980404}
-  - 136: {fileID: 136000012112275720}
+  - 136: {fileID: 136000012080125924}
   m_Layer: 0
   m_Name: joint14
   m_TagString: Untagged
@@ -171,7 +171,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010096263948}
   - 54: {fileID: 54000011164260472}
-  - 136: {fileID: 136000012197938434}
+  - 136: {fileID: 136000010694547286}
   m_Layer: 0
   m_Name: joint17
   m_TagString: Untagged
@@ -188,7 +188,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012999000518}
   - 54: {fileID: 54000010846884884}
-  - 136: {fileID: 136000011356292432}
+  - 136: {fileID: 136000011512448606}
   m_Layer: 0
   m_Name: joint11
   m_TagString: Untagged
@@ -205,7 +205,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013028070392}
   - 54: {fileID: 54000010932022840}
-  - 136: {fileID: 136000013680035960}
+  - 136: {fileID: 136000014205263632}
   m_Layer: 0
   m_Name: joint12
   m_TagString: Untagged
@@ -406,7 +406,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -630,7 +630,7 @@ MonoBehaviour:
   BoneColliderType: 1
   BoneColliderDiameter: 0.05
   BoneColliderSkip: 0
-  BoneColliderLength: 1
+  BoneColliderLength: 1.17
   BoneColliderOffset: -0.5
   LinkMass: 1
   LinkSolverIterationCount: 100
@@ -781,59 +781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29df7ce054b10484288ec44496b73481, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!136 &136000011356292432
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013054167360}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.025
-  m_Height: 0.23688412
-  m_Direction: 0
-  m_Center: {x: -0.11844206, y: 0, z: 0}
---- !u!136 &136000011783563130
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010817202302}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.025
-  m_Height: 0.21934223
-  m_Direction: 0
-  m_Center: {x: -0.109671116, y: 0, z: 0}
---- !u!136 &136000012011806958
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010159394136}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.025
-  m_Height: 0.23104
-  m_Direction: 0
-  m_Center: {x: -0.11552, y: 0, z: 0}
---- !u!136 &136000012112275720
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011042927572}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.025
-  m_Height: 0.23103523
-  m_Direction: 0
-  m_Center: {x: -0.115517616, y: 0, z: 0}
---- !u!136 &136000012197938434
+--- !u!136 &136000010694547286
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -843,23 +791,10 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.025
-  m_Height: 0.22226596
+  m_Height: 0.26005116
   m_Direction: 0
-  m_Center: {x: -0.11113298, y: 0, z: 0}
---- !u!136 &136000012225033958
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010074950950}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.025
-  m_Height: 0.19887018
-  m_Direction: 0
-  m_Center: {x: -0.09943509, y: 0, z: 0}
---- !u!136 &136000013590256076
+  m_Center: {x: -0.13002558, y: 0, z: 0}
+--- !u!136 &136000011142246658
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -869,10 +804,75 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.025
-  m_Height: 0.23980856
+  m_Height: 0.280576
   m_Direction: 0
-  m_Center: {x: -0.11990428, y: 0, z: 0}
---- !u!136 &136000013680035960
+  m_Center: {x: -0.140288, y: 0, z: 0}
+--- !u!136 &136000011157695924
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010159394136}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.025
+  m_Height: 0.27031678
+  m_Direction: 0
+  m_Center: {x: -0.13515839, y: 0, z: 0}
+--- !u!136 &136000011316939002
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010817202302}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.025
+  m_Height: 0.2566304
+  m_Direction: 0
+  m_Center: {x: -0.1283152, y: 0, z: 0}
+--- !u!136 &136000011512448606
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013054167360}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.025
+  m_Height: 0.27715442
+  m_Direction: 0
+  m_Center: {x: -0.13857721, y: 0, z: 0}
+--- !u!136 &136000012080125924
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011042927572}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.025
+  m_Height: 0.2703112
+  m_Direction: 0
+  m_Center: {x: -0.1351556, y: 0, z: 0}
+--- !u!136 &136000013578398732
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010074950950}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.025
+  m_Height: 0.2326781
+  m_Direction: 0
+  m_Center: {x: -0.11633905, y: 0, z: 0}
+--- !u!136 &136000014205263632
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -882,9 +882,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.025
-  m_Height: 0.21641254
+  m_Height: 0.25320268
   m_Direction: 0
-  m_Center: {x: -0.10820627, y: 0, z: 0}
+  m_Center: {x: -0.12660134, y: 0, z: 0}
 --- !u!137 &137000012978634400
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
