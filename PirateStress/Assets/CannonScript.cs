@@ -4,8 +4,6 @@ using System;
 
 public class CannonScript : MonoBehaviour
 {
-    private bool myIsActive = false;
-
     private Animator myAnimator;
     private Rigidbody myCannonShot;
     private float myCooldownTimer = 0;
@@ -38,7 +36,7 @@ public class CannonScript : MonoBehaviour
     public void Shot(Collider aCollider)
     {
         myCannonShot = aCollider.GetComponent<Rigidbody>();
-        myCooldownTimer = 3.5f;
+        myCooldownTimer = 5.5f;
         myAnimator.SetBool("IsReloading", false);
     }
 
