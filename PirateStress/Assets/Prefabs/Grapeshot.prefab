@@ -25,7 +25,7 @@ GameObject:
   - 114: {fileID: 114000011432031900}
   - 54: {fileID: 54000014235185480}
   m_Layer: 0
-  m_Name: GrapeShot
+  m_Name: Grapeshot
   m_TagString: Cannonball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
