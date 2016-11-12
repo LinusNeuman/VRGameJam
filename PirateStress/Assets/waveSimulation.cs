@@ -3,8 +3,6 @@ using System.Collections;
 
 public class waveSimulation : MonoBehaviour {
     [SerializeField]
-    private Transform myTransform;
-    [SerializeField]
     private float myMaxWaveAmount;
 
     private Vector3 goals;
@@ -24,7 +22,7 @@ public class waveSimulation : MonoBehaviour {
         newGoals.y = myMaxWaveAmount;
         newGoals.z = myMaxWaveAmount;
 
-        myTransform.Rotate(current);
+        gameObject.transform.Rotate(current);
 	}
 
 	// Update is called once per frame
@@ -50,6 +48,6 @@ public class waveSimulation : MonoBehaviour {
             }
         }
 
-        myTransform.rotation = Quaternion.Euler(current);
+        gameObject.transform.rotation = Quaternion.Euler(current);
 	}
 }
