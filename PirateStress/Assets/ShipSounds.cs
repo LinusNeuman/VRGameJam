@@ -30,6 +30,7 @@ public class ShipSounds : MonoBehaviour {
                 soundToPlay = Random.Range(0, myCreakSounds.Length);
             }
             myLastPlayedSound = soundToPlay;
+            myCreakSounds[soundToPlay].pitch = Random.Range(0.5f, 1.5f);
             myCreakSounds[soundToPlay].Play();
         }
     }
