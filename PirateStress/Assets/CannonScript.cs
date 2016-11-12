@@ -7,6 +7,7 @@ public class CannonScript : MonoBehaviour
     private bool myIsActive = false;
 
     private Animator myAnimator;
+    private Rigidbody myCannonShot;
 
     void Awake()
     {
@@ -15,17 +16,17 @@ public class CannonScript : MonoBehaviour
 
     public void Reload()
     {
+        if (myCannonShot != null)
+        {
+            myCannonShot.AddForce(-32, 0, 0, ForceMode.Impulse);
+        }
         myAnimator.SetBool("IsReloading", true);
     }
 
-    public void Shot()
+    public void Shot(Collider aCollider)
     {
+        myCannonShot = aCollider.GetComponent<Rigidbody>();
         myAnimator.SetBool("IsReloading", false);
-    }
-
-    public void OnCollisionEnter(Collision collision)
-    {
-        Shot();
     }
 
     internal bool GetIsReloading()

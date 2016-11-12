@@ -22,7 +22,7 @@ public class CannonManager : MonoBehaviour {
         mySwitchCannonTimer -= Time.deltaTime;
         if (mySwitchCannonTimer <= 0)
         {
-            mySwitchCannonTimer = Random.Range(4.0f, 8.0f);
+            mySwitchCannonTimer = Random.Range(2.0f, 8.0f);
 
             int index = -1; //Random.Range(0, myCannons.Count);
 

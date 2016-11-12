@@ -7,6 +7,7 @@ public class Movement : MonoBehaviour {
 
     void Start()
     {
+        myRigidbody = GetComponent<Rigidbody>();
         myRigidbody.AddForce(new Vector3(100, 0, 0));
     }
 
