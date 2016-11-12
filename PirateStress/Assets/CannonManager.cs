@@ -24,8 +24,18 @@ public class CannonManager : MonoBehaviour {
         {
             mySwitchCannonTimer = Random.Range(4.0f, 8.0f);
 
-            int index = Random.Range(0, myCannons.Count);
-            for (; index < myCannons.Count; ++index)
+            int index = -1; //Random.Range(0, myCannons.Count);
+
+            for (int i = 0; i < myCannons.Count; ++i)
+            {
+                if (myCannons[i].GetIsReloading() == false)
+                {
+                    index = i;
+                    break;
+                }
+            }
+
+            if (index > -1)
             {
                 myCannons[index].Reload();
             }

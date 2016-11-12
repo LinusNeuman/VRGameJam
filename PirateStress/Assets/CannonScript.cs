@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class CannonScript : MonoBehaviour
 {
@@ -20,5 +21,15 @@ public class CannonScript : MonoBehaviour
     public void Shot()
     {
         myAnimator.SetBool("IsReloading", false);
+    }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        Shot();
+    }
+
+    internal bool GetIsReloading()
+    {
+        return myAnimator.GetBool("IsReloading");
     }
 }
