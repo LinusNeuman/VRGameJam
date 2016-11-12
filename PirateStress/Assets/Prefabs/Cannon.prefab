@@ -11,6 +11,22 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1000014012917524}
   m_IsPrefabParent: 1
+--- !u!1 &1000011171813000
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000010483803332}
+  - 135: {fileID: 135000013971789064}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1000011497652444
 GameObject:
   m_ObjectHideFlags: 1
@@ -21,6 +37,7 @@ GameObject:
   - 4: {fileID: 4000014143335358}
   - 33: {fileID: 33000013310791294}
   - 23: {fileID: 23000013076287672}
+  - 64: {fileID: 64000012875281446}
   m_Layer: 0
   m_Name: CannonGun
   m_TagString: Untagged
@@ -122,8 +139,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013836526382}
-  - 114: {fileID: 114000012631823354}
   - 95: {fileID: 95000011411123360}
+  - 114: {fileID: 114000012631823354}
   m_Layer: 0
   m_Name: Cannon
   m_TagString: Untagged
@@ -131,6 +148,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4000010483803332
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011171813000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.238, y: 0.14, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4000014143335358}
+  m_RootOrder: 1
 --- !u!4 &4000011338431114
 Transform:
   m_ObjectHideFlags: 1
@@ -196,9 +226,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.12432983, y: 0.65201515, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -160}
   m_Children:
   - {fileID: 4000012638886608}
+  - {fileID: 4000010483803332}
   m_Father: {fileID: 4000011338431114}
   m_RootOrder: 0
 --- !u!23 &23000010378985376
@@ -308,6 +339,18 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011497652444}
+  m_Mesh: {fileID: 4300000, guid: 358c3e6a9edb159468c13d2b39f95e5d, type: 3}
+--- !u!64 &64000012875281446
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011497652444}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 358c3e6a9edb159468c13d2b39f95e5d, type: 3}
 --- !u!95 &95000011411123360
 Animator:
@@ -424,6 +467,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84f49970e3d312f40b654df34f6e47c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!135 &135000013971789064
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011171813000}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.12
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!222 &222000010992271340
 CanvasRenderer:
   m_ObjectHideFlags: 1
