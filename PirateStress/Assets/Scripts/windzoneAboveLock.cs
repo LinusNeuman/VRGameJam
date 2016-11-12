@@ -17,7 +17,7 @@ public class windzoneAboveLock : MonoBehaviour
     {
         Vector3 newPos = transform.parent.position;
 
-        newPos.y = myDistance;
+        newPos.y += myDistance;
 
         transform.position = newPos;
 	}
