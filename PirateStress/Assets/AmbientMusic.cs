@@ -10,10 +10,14 @@ public class AmbientMusic : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        myAudioSource = new AudioSource();
+
+        gameObject.AddComponent<AudioSource>();
+
+        myAudioSource = GetComponent<AudioSource>();
         myAudioSource.playOnAwake = false;
         myAudioSource.clip = myWaves;
         myAudioSource.Play();
+
       //  myAudioSource.clip = mySeagulls;
       //  myAudioSource.loop = true;
       //  myAudioSource.Play();
