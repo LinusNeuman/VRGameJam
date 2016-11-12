@@ -31,8 +31,11 @@ public class KegSpawner : MonoBehaviour {
     [SerializeField]
     private float myCloseTimer;
     private bool myIsOpen;
-	// Use this for initialization
-	void Start () {
+
+    [SerializeField]
+    private bool myKick = false;
+    // Use this for initialization
+    void Start () {
         mySpawnTimer = 0.0f;
         mySpawnedInstances = 0;
         myCloseAnimationTimer = 0.0f;
@@ -46,7 +49,11 @@ public class KegSpawner : MonoBehaviour {
 	    if(mySpawnTimer >= mySpawnRate)
         {
             ++mySpawnedInstances;
-            Instantiate(myNormalKeg, transform.position, Quaternion.Euler(90, 0, 0), transform);
+            GameObject spawned = (GameObject)Instantiate(myNormalKeg, transform.position, Quaternion.Euler(90, 0, 0), transform);
+            if (myKick == true)
+            {
+                spawned.GetComponent<Rigidbody>().AddForce(-17, 0, 0, ForceMode.Impulse);
+            }
             mySpawnTimer = 0.0f;
         }
 
