@@ -1,37 +1,15 @@
 fileFormatVersion: 2
 guid: 7438fdc815518394d82ebaab8e1026fe
-timeCreated: 1478942349
+timeCreated: 1478942900
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: pCube20
-    100002: pCube21
-    100004: pCylinder70
-    100006: Shelves
-    100008: //RootNode
-    100010: Walls1
-    400000: pCube20
-    400002: pCube21
-    400004: pCylinder70
-    400006: Shelves
-    400008: //RootNode
-    400010: Walls1
-    2300000: pCube20
-    2300002: pCube21
-    2300004: pCylinder70
-    2300006: Shelves
-    2300008: Walls1
-    3300000: pCube20
-    3300002: pCube21
-    3300004: pCylinder70
-    3300006: Shelves
-    3300008: Walls1
-    4300000: Shelves
-    4300002: pCylinder70
-    4300004: Walls1
-    4300006: pCube21
-    4300008: pCube20
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: StaticEnviro1
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -91,7 +69,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
