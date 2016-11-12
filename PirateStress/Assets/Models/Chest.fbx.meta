@@ -1,27 +1,28 @@
 fileFormatVersion: 2
-guid: 829992bf7b331184caa15a7901d22bd6
-timeCreated: 1458847223
-licenseType: Store
+guid: e1a6fbd6c487cef46b667b0d3d22f649
+timeCreated: 1478957721
+licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: default
-    100002: default_MeshPart0
-    100004: default_MeshPart1
-    100006: //RootNode
-    400000: default
-    400002: default_MeshPart0
-    400004: default_MeshPart1
-    400006: //RootNode
-    2300000: default_MeshPart0
-    2300002: default_MeshPart1
-    2300004: default
-    3300000: default_MeshPart0
-    3300002: default_MeshPart1
-    3300004: default
-    4300000: default_MeshPart0
-    4300002: default_MeshPart1
-    4300004: default
+    100000: //RootNode
+    100002: pCube51
+    100004: polySurface7
+    100006: pTorus1
+    400000: //RootNode
+    400002: pCube51
+    400004: polySurface7
+    400006: pTorus1
+    2300000: pCube51
+    2300002: polySurface7
+    2300004: pTorus1
+    3300000: pCube51
+    3300002: polySurface7
+    3300004: pTorus1
+    4300000: pCube51
+    4300002: pTorus1
+    4300004: polySurface7
+    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -63,8 +64,8 @@ ModelImporter:
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 1
-    tangentImportMode: 4
+    normalImportMode: 0
+    tangentImportMode: 3
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
@@ -80,7 +81,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d7c860fd08e772f46898446ea1a628d0
-timeCreated: 1478956091
+timeCreated: 1478956956
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -13,8 +13,8 @@ ModelImporter:
     100010: joint16
     100012: joint17
     100014: joint18
-    100016: Rope
-    100018: //RootNode
+    100016: //RootNode
+    100018: Rope
     100020: Rope_skele
     400000: joint11
     400002: joint12
@@ -24,14 +24,12 @@ ModelImporter:
     400010: joint16
     400012: joint17
     400014: joint18
-    400016: Rope
-    400018: //RootNode
+    400016: //RootNode
+    400018: Rope
     400020: Rope_skele
-    2300000: Rope
-    3300000: Rope
     4300000: Rope
     9500000: //RootNode
-    11100000: //RootNode
+    13700000: Rope
   materials:
     importMaterials: 1
     materialName: 0
@@ -75,7 +73,7 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
-  importAnimation: 1
+  importAnimation: 0
   copyAvatar: 0
   humanDescription:
     human: []
@@ -87,10 +85,10 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    rootMotionBoneName: Rope_skele
+    rootMotionBoneName: Rope
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 1
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
