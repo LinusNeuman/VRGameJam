@@ -12,8 +12,8 @@ public class AnimatedTorch : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        myLightGoal = Random.Range(0.5f, 1.25f);
-        myLight.intensity = 0.75f;
+        myLightGoal = Random.Range(1.0f, 2.25f);
+        myLight.intensity = .75f;
 	}
 	
 	// Update is called once per frame
@@ -30,7 +30,7 @@ public class AnimatedTorch : MonoBehaviour {
 
         if(Random.Range(0.0f, 100.0f) < 50.0f)
         {
-            myLightGoal = Random.Range(0.5f, 1.25f);
+            myLightGoal = Random.Range(1.0f, 2.25f);
         }
 	}
 }
