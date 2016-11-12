@@ -8,6 +8,9 @@ public class CannonCollider : MonoBehaviour
 
     public void OnTriggerEnter(Collider collision)
     {
-        myCannonScript.Shot(collision);
+        if (collision.tag == "Cannonball")
+        {
+            myCannonScript.Shot(collision);
+        }
     }
 }
