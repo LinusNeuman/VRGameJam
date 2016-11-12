@@ -1,17 +1,23 @@
 fileFormatVersion: 2
-guid: cc1287f41c71d744bac89cfa48dfcdad
-timeCreated: 1440769188
-licenseType: Store
+guid: aef963e1004c5054da3872dfd38632e9
+timeCreated: 1478976238
+licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
-    100002: default
+    100002: RumBottle
+    100004: RumCap
     400000: //RootNode
-    400002: default
-    2300000: default
-    3300000: default
-    4300000: default
+    400002: RumBottle
+    400004: RumCap
+    2300000: RumBottle
+    2300002: RumCap
+    3300000: RumBottle
+    3300002: RumCap
+    4300000: RumCap
+    4300002: RumBottle
+    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -36,7 +42,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.1
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -54,7 +60,7 @@ ModelImporter:
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
-    tangentImportMode: 4
+    tangentImportMode: 3
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
@@ -70,7 +76,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
