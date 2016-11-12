@@ -1,22 +1,15 @@
 fileFormatVersion: 2
-guid: 6a9c3b42ff4717844a461ca81553e0a9
-timeCreated: 1478983408
+guid: 7438fdc815518394d82ebaab8e1026fe
+timeCreated: 1478983085
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
-    100002: RumBottle
-    100004: RumCap
     400000: //RootNode
-    400002: RumBottle
-    400004: RumCap
-    2300000: RumBottle
-    2300002: RumCap
-    3300000: RumBottle
-    3300002: RumCap
-    4300000: RumCap
-    4300002: RumBottle
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: StaticEnviro2
     9500000: //RootNode
   materials:
     importMaterials: 1
