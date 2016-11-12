@@ -1,0 +1,172 @@
+fileFormatVersion: 2
+guid: e95bb0b3e6832f94594826c529c38675
+timeCreated: 1478942452
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Cannon
+    100002: Cannon1
+    100004: Cannon10
+    100006: Cannon18
+    100008: Cannon19
+    100010: Cannon2
+    100012: Cannon20
+    100014: Cannon3
+    100016: Cannon4
+    100018: Cannon5
+    100020: Cannon6
+    100022: Cannon7
+    100024: Cannon8
+    100026: Cannon9
+    100028: //RootNode
+    100030: curve1
+    100032: curve2
+    100034: curve3
+    100036: curve4
+    100038: extrudedSurface1
+    100040: extrudedSurface2
+    100042: extrudedSurface3
+    100044: extrudedSurface4
+    400000: Cannon
+    400002: Cannon1
+    400004: Cannon10
+    400006: Cannon18
+    400008: Cannon19
+    400010: Cannon2
+    400012: Cannon20
+    400014: Cannon3
+    400016: Cannon4
+    400018: Cannon5
+    400020: Cannon6
+    400022: Cannon7
+    400024: Cannon8
+    400026: Cannon9
+    400028: //RootNode
+    400030: curve1
+    400032: curve2
+    400034: curve3
+    400036: curve4
+    400038: extrudedSurface1
+    400040: extrudedSurface2
+    400042: extrudedSurface3
+    400044: extrudedSurface4
+    2300000: Cannon
+    2300002: Cannon1
+    2300004: Cannon10
+    2300006: Cannon18
+    2300008: Cannon19
+    2300010: Cannon2
+    2300012: Cannon20
+    2300014: Cannon3
+    2300016: Cannon4
+    2300018: Cannon5
+    2300020: Cannon6
+    2300022: Cannon7
+    2300024: Cannon8
+    2300026: Cannon9
+    2300028: extrudedSurface1
+    2300030: extrudedSurface2
+    2300032: extrudedSurface3
+    2300034: extrudedSurface4
+    3300000: Cannon
+    3300002: Cannon1
+    3300004: Cannon10
+    3300006: Cannon18
+    3300008: Cannon19
+    3300010: Cannon2
+    3300012: Cannon20
+    3300014: Cannon3
+    3300016: Cannon4
+    3300018: Cannon5
+    3300020: Cannon6
+    3300022: Cannon7
+    3300024: Cannon8
+    3300026: Cannon9
+    3300028: extrudedSurface1
+    3300030: extrudedSurface2
+    3300032: extrudedSurface3
+    3300034: extrudedSurface4
+    4300000: Cannon20
+    4300002: Cannon19
+    4300004: Cannon18
+    4300006: Cannon10
+    4300008: Cannon9
+    4300010: Cannon8
+    4300012: Cannon7
+    4300014: Cannon6
+    4300016: Cannon5
+    4300018: Cannon4
+    4300020: Cannon3
+    4300022: Cannon2
+    4300024: Cannon1
+    4300026: Cannon
+    4300028: extrudedSurface4
+    4300030: extrudedSurface3
+    4300032: extrudedSurface2
+    4300034: extrudedSurface1
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
