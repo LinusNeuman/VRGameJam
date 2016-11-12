@@ -34,6 +34,9 @@ public class KegSpawner : MonoBehaviour {
 
     [SerializeField]
     private bool myKick = false;
+
+    [SerializeField]
+    private float myKickAmount = -17;
     // Use this for initialization
     void Start () {
         mySpawnTimer = 0.0f;
@@ -52,7 +55,7 @@ public class KegSpawner : MonoBehaviour {
             GameObject spawned = (GameObject)Instantiate(myNormalKeg, transform.position, Quaternion.Euler(90, 0, 0), transform);
             if (myKick == true)
             {
-                spawned.GetComponent<Rigidbody>().AddForce(-17, 0, 0, ForceMode.Impulse);
+                spawned.GetComponent<Rigidbody>().AddForce(myKickAmount, 0, 0, ForceMode.Impulse);
             }
             mySpawnTimer = 0.0f;
         }

@@ -39,7 +39,7 @@ Transform:
   m_GameObject: {fileID: 1000011498837318}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.22, y: -0.0080541, z: -0.495}
-  m_LocalScale: {x: 0.010241752, y: 0.010241757, z: 0.010241757}
+  m_LocalScale: {x: 0.95, y: 0.95, z: 0.95}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -57,7 +57,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b512cbff403057145a58ee33fd6a5d1a, type: 2}
+  - {fileID: 2100000, guid: 3d61b83cfb4cd63418f16e2544ad4d1f, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -79,7 +79,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011498837318}
-  m_Mesh: {fileID: 4300004, guid: 9110b3198be7dff469f95ba638c33a65, type: 3}
+  m_Mesh: {fileID: 4300000, guid: fc2478ffaf8573949b10e4a2a9b81fa3, type: 3}
 --- !u!54 &54000012895685844
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -117,5 +117,5 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 7.4871445
-  m_Center: {x: -0.000002861023, y: 7.4871387, z: 0.0000014305115}
+  m_Radius: 0.095
+  m_Center: {x: 0, y: 0, z: 0}
