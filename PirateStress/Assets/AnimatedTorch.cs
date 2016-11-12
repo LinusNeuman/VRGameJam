@@ -7,14 +7,30 @@ public class AnimatedTorch : MonoBehaviour {
     private float myFlickerAmount;
     [SerializeField]
     private Light myLight;
+    private float myLightGoal;
 
 	// Use this for initialization
-	void Start () {
-	
+	void Start ()
+    {
+        myLightGoal = Random.Range(0.5f, 1.25f);
+        myLight.intensity = 0.75f;
 	}
 	
 	// Update is called once per frame
-	void Update () {
-        myLight.intensity = Mathf.Sin(Time.realtimeSinceStartup) + 1;
+	void Update ()
+    {
+        if (myLight.intensity < myLightGoal)
+        {
+            myLight.intensity += Time.deltaTime * myFlickerAmount;
+        }
+        else
+        {
+            myLight.intensity -= Time.deltaTime * myFlickerAmount;
+        }
+
+        if(Random.Range(0.0f, 100.0f) < 50.0f)
+        {
+            myLightGoal = Random.Range(0.5f, 1.25f);
+        }
 	}
 }
