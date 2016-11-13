@@ -494,10 +494,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCannonballImage: {fileID: 114000010497264448}
   myGunpowderImage: {fileID: 114000010989431166}
-  cannonballSprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
-  grapeshotSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  powderSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  HESprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  cannonballSprite: {fileID: 21300000, guid: d2f39c842b4b06443aad84d4818543f7, type: 3}
+  grapeshotSprite: {fileID: 21300000, guid: 8eb02b479c52c1b4aa883c888d973673, type: 3}
+  powderSprite: {fileID: 21300000, guid: ae3763a4e3d327b448fbd7a37df2a530, type: 3}
+  HESprite: {fileID: 21300000, guid: 2964d1dc4a40e434b9d31a4a971c7f18, type: 3}
 --- !u!114 &114000010989431166
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2379,7 +2379,7 @@ RectTransform:
   m_GameObject: {fileID: 1000012291170378}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0000005, y: 1.0000001, z: 1.0000004}
+  m_LocalScale: {x: 1.0000005, y: 0.6, z: 1.0000004}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 224000010093093624}
@@ -2397,7 +2397,7 @@ RectTransform:
   m_GameObject: {fileID: 1000013322724194}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.6, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 224000010093093624}
