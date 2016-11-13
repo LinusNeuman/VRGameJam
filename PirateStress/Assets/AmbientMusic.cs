@@ -15,7 +15,7 @@ public class AmbientMusic : MonoBehaviour {
 
         myAudioSource = GetComponent<AudioSource>();
         myAudioSource.playOnAwake = false;
-        myAudioSource.volume = 0.8f;
+        myAudioSource.volume = 0.5f;
         myAudioSource.clip = myWaves;
         myAudioSource.loop = true;
         myAudioSource.Play();
