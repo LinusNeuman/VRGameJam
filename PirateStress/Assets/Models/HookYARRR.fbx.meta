@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: abd0004a5fde04f4ca7b423a8b159c45
-timeCreated: 1478947655
+timeCreated: 1478989456
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: pSphere29
+    4300000: HookYARR
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -69,7 +69,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
