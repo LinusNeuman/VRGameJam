@@ -96,6 +96,8 @@ public class CannonScript : MonoBehaviour
             {
                 if (myCannonShot != null)
                 {
+                    transform.FindChild("CannonBase").FindChild("CannonGun").FindChild("CannonLighter").FindChild("FuseParticle").GetComponent<ParticleSystem>().Stop();
+
                     myCannonShot.AddForce(-40, 0, 0, ForceMode.Impulse);
                     myCannonShot = null;
 
