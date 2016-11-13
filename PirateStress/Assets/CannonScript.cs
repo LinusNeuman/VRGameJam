@@ -91,6 +91,7 @@ public class CannonScript : MonoBehaviour
                 if (myCannonShot != null)
                 {
                     transform.FindChild("CannonBase").FindChild("CannonGun").FindChild("CannonLighter").FindChild("FuseParticle").GetComponent<ParticleSystem>().Stop();
+                    transform.FindChild("CannonBase").FindChild("CannonGun").FindChild("CannonLighter").GetComponent<AudioSource>().Stop();
 
                     transform.FindChild("SoundEffect").GetComponent<AudioSource>().Play();
 

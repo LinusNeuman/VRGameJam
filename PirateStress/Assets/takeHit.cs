@@ -7,10 +7,14 @@ public class takeHit : MonoBehaviour
     private float magnitude;
 
     [SerializeField]
-    private float shakeTime;
+    private float shakeTimeMin;
+    [SerializeField]
+    private float shakeTimeMax;
 
+    [SerializeField]
     private bool shaking;
     private float shakeTimer;
+    private float shakeTimeGoal;
     private Quaternion originalRotation;
 
     public void Activate()
@@ -23,6 +27,8 @@ public class takeHit : MonoBehaviour
     {
         shaking = false;
         originalRotation = gameObject.transform.rotation;
+        shakeTimeGoal = Random.Range(shakeTimeMin, shakeTimeMax);
+        GetComponent<waveSimulation>().Pause();
 	}
 	
 	// Update is called once per frame
@@ -40,11 +46,12 @@ public class takeHit : MonoBehaviour
 
             shakeTimer += Time.deltaTime;
 
-            if(shakeTimer >= shakeTime)
+            if(shakeTimer >= shakeTimeGoal)
             {
                 gameObject.transform.rotation = originalRotation;
                 shaking = false;
                 shakeTimer = 0.0f;
+                GetComponent<waveSimulation>().Unpause();
             }
         }
     }
