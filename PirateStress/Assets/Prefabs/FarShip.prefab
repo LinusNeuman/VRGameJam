@@ -384,3 +384,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myFireCooldown: 30
   myFireRandomAmount: 10
+  myTakeHitReference: {fileID: 0}
