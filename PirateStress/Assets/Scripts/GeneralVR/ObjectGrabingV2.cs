@@ -98,7 +98,6 @@ public abstract class ObjectGrabingV2 : HandInteractionBase<ObjectGrabingV2>
 
             float rotation = Mathf.Atan2(unit.x, unit.z);
             _State.ObjectInHand.transform.localRotation = Quaternion.Euler(0, rotation * (180.0f / Mathf.PI), 0);
-            _State.ObjectInHand.transform.localRotation = Quaternion.Euler(0, dot * 180.0f, 0);
             
             return;
         }
