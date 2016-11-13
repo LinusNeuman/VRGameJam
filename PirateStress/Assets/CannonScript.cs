@@ -22,12 +22,12 @@ public class CannonScript : MonoBehaviour
         myWishedCannonballType = GenerateWishedCannonball();
     }
 
-    GunpowderLogic.ePowderType GetWishedGunpowder()
+    public GunpowderLogic.ePowderType GetWishedGunpowder()
     {
         return myWishedPowderType;
     }
 
-    CannonballLogic.eCannonballType GetWishedCannonball()
+    public CannonballLogic.eCannonballType GetWishedCannonball()
     {
         return myWishedCannonballType;
     }
