@@ -87,8 +87,12 @@ public abstract class ObjectGrabingV2 : HandInteractionBase<ObjectGrabingV2>
 
         if (_State.ObjectInHand.tag == "Door")
         {
+            Vector3 doorPos = _State.ObjectInHandTrans.position;
+
             _State.ObjectInHand.AddRelativeTorque(0, (_State.CurrentVelocity.z + _State.CurrentVelocity.z) * 100.0f, 0, ForceMode.Force);
 
+
+            
             return;
         }
 
@@ -195,6 +199,7 @@ public abstract class ObjectGrabingV2 : HandInteractionBase<ObjectGrabingV2>
             DropObject();
 
         grabbedBody.isKinematic = true;
+        grabbedBody.velocity = Vector3.zero;
 
         var oldParent = grabbedBody.transform.parent;
         grabbedBody.transform.parent = Trans;
