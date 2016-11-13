@@ -84,8 +84,16 @@ public abstract class ObjectGrabingV2 : HandInteractionBase<ObjectGrabingV2>
     {
         // This dublicated the native child - parent behaviour in Unity, without scaling
         var parentMatrix = Matrix4x4.TRS(Trans.position, Trans.rotation, Trans.lossyScale);
-        _State.ObjectInHand.MovePosition(parentMatrix.MultiplyPoint3x4(_State.HoldPosOffset));
-        _State.ObjectInHand.MoveRotation((Trans.rotation * Quaternion.Inverse(_State.ParentStartRot)) * _State.HoldRotOffset);
+
+        if (_State.ObjectInHand.tag == "Door")
+        {
+            _State.ObjectInHand.AddRelativeTorque(0, _State.CurrentVelocity.y + _State.CurrentVelocity.z, 0, ForceMode.Force);
+
+            return;
+        }
+
+        _State.ObjectInHand.position = (parentMatrix.MultiplyPoint3x4(_State.HoldPosOffset));
+        _State.ObjectInHand.rotation = ((Trans.rotation * Quaternion.Inverse(_State.ParentStartRot)) * _State.HoldRotOffset);
 
         //_State.ObjectInHandTrans.position = parentMatrix.MultiplyPoint3x4(_State.HoldPosOffset);
         //_State.ObjectInHandTrans.rotation = (Trans.rotation * Quaternion.Inverse(_State.ParentStartRot)) * _State.HoldRotOffset;

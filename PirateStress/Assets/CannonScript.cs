@@ -14,6 +14,9 @@ public class CannonScript : MonoBehaviour
     private GunpowderLogic.ePowderType myWishedPowderType;
     private CannonballLogic.eCannonballType myWishedCannonballType;
 
+    private bool myHasGottenRightGunpowder = false;
+    private bool myHasGottenRightCannonball = false;
+
     void Awake()
     {
         myAnimator = GetComponent<Animator>();
@@ -69,11 +72,6 @@ public class CannonScript : MonoBehaviour
             myFireCooldownTimer -= Time.deltaTime;
             myFireCooldownTimer = Mathf.Max(0, myFireCooldownTimer);
 
-            if (myFireCooldownTimer <= 1.0f)
-            {
-                Fire();
-            }
-
             if (myFireCooldownTimer <= 0.0f)
             {
                 myIsReady = true;
@@ -85,8 +83,19 @@ public class CannonScript : MonoBehaviour
     {
         if (myCannonShot != null)
         {
-            myCannonShot.AddForce(-32, 0, 0, ForceMode.Impulse);
-            myCannonShot = null;
+            if(myHasGottenRightCannonball == false || myHasGottenRightGunpowder == false)
+            {
+                return;
+            }
+
+            if (myCooldownTimer <= 0)
+            {
+                myCannonShot.AddForce(-40, 0, 0, ForceMode.Impulse);
+                myCannonShot = null;
+
+                myHasGottenRightGunpowder = false;
+                myHasGottenRightCannonball = false;
+            }
         }
     }
 
@@ -102,9 +111,28 @@ public class CannonScript : MonoBehaviour
 
     public void Shot(Collider aCollider)
     {
-        myCannonShot = aCollider.GetComponent<Rigidbody>();
-        myCooldownTimer = 5.5f;
-        myAnimator.SetBool("IsReloading", false);
+        if(myHasGottenRightGunpowder == false)
+        {
+            return;
+        }
+
+        if(aCollider.GetComponent<CannonballLogic>().GetCannonballType() == myWishedCannonballType)
+        {
+            myHasGottenRightCannonball = true;
+            myCannonShot = aCollider.GetComponent<Rigidbody>();
+            myCooldownTimer = 5.5f;
+            myAnimator.SetBool("IsReloading", false);
+            myIsReady = false;
+        }
+    }
+
+    public void FillPowder(Collider collision)
+    {
+        if (collision.GetComponent<GunpowderLogic>().GetPowderType() == myWishedPowderType)
+        {
+            myHasGottenRightGunpowder = true;
+            Destroy(collision.gameObject);
+        }
     }
 
     internal bool GetIsReloading()

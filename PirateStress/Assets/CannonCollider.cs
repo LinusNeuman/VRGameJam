@@ -12,5 +12,9 @@ public class CannonCollider : MonoBehaviour
         {
             myCannonScript.Shot(collision);
         }
+        if(collision.tag == "Gunpowder")
+        {
+            myCannonScript.FillPowder(collision);
+        }
     }
 }

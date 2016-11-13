@@ -19,7 +19,10 @@ public class FuseScript : MonoBehaviour {
     {
         if (collision.tag == "Torch")
         {
-            myCannonScript.Shot(collision);
+            if(collision.gameObject.GetComponent<torch>().GetLit() == true)
+            {
+                myCannonScript.Fire();
+            }
         }
     }
 }
