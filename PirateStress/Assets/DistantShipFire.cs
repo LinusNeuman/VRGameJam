@@ -38,9 +38,9 @@ public class DistantShipFire : MonoBehaviour {
         transform.FindChild("SoundEffects").GetComponent<AudioSource>().Play();
 
         int chanceOfHit = Random.Range(0, 100);
-       // if(chanceOfHit <= 15)
-       // {
+        if(chanceOfHit <= 20)
+        {
             myTakeHitReference.Activate();
-       // }
+        }
     }
 }
