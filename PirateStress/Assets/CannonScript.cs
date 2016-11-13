@@ -111,6 +111,11 @@ public class CannonScript : MonoBehaviour
 
     public void Shot(Collider aCollider)
     {
+        if(myHasGottenRightGunpowder == false)
+        {
+            return;
+        }
+
         if(aCollider.GetComponent<CannonballLogic>().GetCannonballType() == myWishedCannonballType)
         {
             myHasGottenRightCannonball = true;
@@ -118,6 +123,15 @@ public class CannonScript : MonoBehaviour
             myCooldownTimer = 5.5f;
             myAnimator.SetBool("IsReloading", false);
             myIsReady = false;
+        }
+    }
+
+    public void FillPowder(Collider collision)
+    {
+        if (collision.GetComponent<GunpowderLogic>().GetPowderType() == myWishedPowderType)
+        {
+            myHasGottenRightGunpowder = true;
+            Destroy(collision.gameObject);
         }
     }
 
