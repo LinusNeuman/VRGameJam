@@ -123,7 +123,7 @@ public class CannonScript : MonoBehaviour
                 return;
             }
 
-            myFireCooldownTimer = 2.0f;
+            myFireCooldownTimer = 4.2f;
             myIsFiring = true;
             myAnimator.SetTrigger("Fire");
         }
@@ -131,7 +131,7 @@ public class CannonScript : MonoBehaviour
 
     public void Reload()
     {
-        if (myCooldownTimer <= 0.0f && myFireCooldownTimer <= 0.0f && myIsFiring == false)
+        if (myCooldownTimer <= 0.0f && myFireCooldownTimer <= 0.0f && myHasGottenRightCannonball == false && myHasGottenRightGunpowder == false && myIsFiring == false)
         {
             myAnimator.SetBool("IsReloading", true);
         }
@@ -165,6 +165,6 @@ public class CannonScript : MonoBehaviour
 
     internal bool GetIsReloading()
     {
-        return (myCooldownTimer > 0.0f || myFireCooldownTimer > 0.0f || myIsFiring == true);
+        return (myCooldownTimer > 0.0f || myFireCooldownTimer > 0.0f || myIsFiring == true || myHasGottenRightCannonball == true || myHasGottenRightGunpowder == true);
     }
 }
