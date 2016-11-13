@@ -64,6 +64,10 @@ public class CannonScript : MonoBehaviour
     {
         myCannonShot = aCollider.GetComponent<Rigidbody>();
         myCooldownTimer = 5.5f;
+
+        myIsReady = false;
+
+
         myAnimator.SetBool("IsReloading", false);
     }
 
