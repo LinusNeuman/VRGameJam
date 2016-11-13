@@ -93,6 +93,8 @@ GameObject:
   - 4: {fileID: 4000012638886608}
   - 33: {fileID: 33000010890388998}
   - 23: {fileID: 23000013438781114}
+  - 65: {fileID: 65000012576819754}
+  - 114: {fileID: 114000013086126204}
   m_Layer: 0
   m_Name: CannonLighter
   m_TagString: Untagged
@@ -228,7 +230,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014012917524}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.4082441, y: 0.437, z: -0.19642398}
+  m_LocalPosition: {x: -3.4082441, y: 0.437, z: -2.006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -245,7 +247,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.12432983, y: 0.65201515, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -160}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -34.666668}
   m_Children:
   - {fileID: 4000012638886608}
   - {fileID: 4000010483803332}
@@ -371,6 +373,18 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 358c3e6a9edb159468c13d2b39f95e5d, type: 3}
+--- !u!65 &65000012576819754
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012179498182}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.08146728, y: 0.11621704, z: 0.033052675}
+  m_Center: {x: 0.015465817, y: 0.0052896924, z: 0.00000012200326}
 --- !u!95 &95000011411123360
 Animator:
   serializedVersion: 3
@@ -515,6 +529,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerEyes: {fileID: 0}
+--- !u!114 &114000013086126204
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012179498182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c223e7d766b3e0429006d8d4e1c4bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myCannonScript: {fileID: 114000012631823354}
 --- !u!114 &114000013210616114
 MonoBehaviour:
   m_ObjectHideFlags: 1
