@@ -134,7 +134,7 @@ public class CannonScript : MonoBehaviour
     {
         if (myCooldownTimer <= 0.0f && myFireCooldownTimer <= 0.0f && myHasGottenRightCannonball == false && myHasGottenRightGunpowder == false && myIsFiring == false && myIsReady == true)
         {
-            myIsReady = true;
+            myIsReady = false;
             myAnimator.SetBool("IsReloading", true);
         }
     }
