@@ -88,10 +88,18 @@ public abstract class ObjectGrabingV2 : HandInteractionBase<ObjectGrabingV2>
         if (_State.ObjectInHand.tag == "Door")
         {
             Vector3 doorPos = _State.ObjectInHandTrans.position;
+            Vector3 handPos = Trans.position;
 
-            _State.ObjectInHand.AddRelativeTorque(0, (_State.CurrentVelocity.z + _State.CurrentVelocity.z) * 100.0f, 0, ForceMode.Force);
+            doorPos.y = 0;
+            handPos.y = 0;
 
+            Vector3 difference = handPos - doorPos;
+            Vector3 unit = difference.normalized;
+            float dot = Vector3.Dot(unit, Vector3.forward);
 
+            _State.ObjectInHand.transform.localRotation = Quaternion.Euler(0, dot * 180.0f, 0);
+
+            //_State.ObjectInHand.AddRelativeTorque(0, (_State.CurrentVelocity.z + _State.CurrentVelocity.z) * 100.0f, 0, ForceMode.Force);
             
             return;
         }

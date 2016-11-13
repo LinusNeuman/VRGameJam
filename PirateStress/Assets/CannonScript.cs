@@ -9,7 +9,7 @@ public class CannonScript : MonoBehaviour
     private float myCooldownTimer = 0;
     private float myFireCooldownTimer = 0;
 
-    private bool myIsReady = false;
+    private bool myIsReady = true;
 
     private GunpowderLogic.ePowderType myWishedPowderType;
     private CannonballLogic.eCannonballType myWishedCannonballType;
@@ -18,6 +18,7 @@ public class CannonScript : MonoBehaviour
     private bool myHasGottenRightCannonball = false;
 
     private bool myIsFiring = false;
+    private bool myTriggered = false;
 
     void Awake()
     {
@@ -74,24 +75,17 @@ public class CannonScript : MonoBehaviour
     {
         myCooldownTimer -= Time.deltaTime;
         myCooldownTimer = Mathf.Max(0, myCooldownTimer);
-        //if (myCooldownTimer <= 0 && myIsReady == false)
-        //{
-        //    if (myFireCooldownTimer == 0)
-        //    {
-        //        myFireCooldownTimer = 2.0f;
-        //    }
-        //    myFireCooldownTimer -= Time.deltaTime;
-        //    myFireCooldownTimer = Mathf.Max(0, myFireCooldownTimer);
-
-        //    if (myFireCooldownTimer <= 0.0f)
-        //    {
-        //        myIsReady = true;
-        //    }
-        //}
 
         if (myIsFiring == true)
         {
             myFireCooldownTimer -= Time.deltaTime;
+
+            if (myFireCooldownTimer <= 6.8f && myTriggered == false)
+            {
+                myTriggered = true;
+                myAnimator.SetTrigger("Fire");
+            }
+
             if (myFireCooldownTimer <= 0)
             {
                 if (myCannonShot != null)
@@ -104,12 +98,15 @@ public class CannonScript : MonoBehaviour
                     myHasGottenRightGunpowder = false;
                     myHasGottenRightCannonball = false;
 
+                    myTriggered = false;
+
                     myWishedPowderType = GenerateWishedGunpowder();
                     myWishedCannonballType = GenerateWishedCannonball();
 
                     myFireCooldownTimer = 0;
                 }
                 myIsFiring = false;
+                myIsReady = false;
             }
         }
     }
@@ -123,16 +120,16 @@ public class CannonScript : MonoBehaviour
                 return;
             }
 
-            myFireCooldownTimer = 4.2f;
+            myFireCooldownTimer = 7.2f;
             myIsFiring = true;
-            myAnimator.SetTrigger("Fire");
         }
     }
 
     public void Reload()
     {
-        if (myCooldownTimer <= 0.0f && myFireCooldownTimer <= 0.0f && myHasGottenRightCannonball == false && myHasGottenRightGunpowder == false && myIsFiring == false)
+        if (myCooldownTimer <= 0.0f && myFireCooldownTimer <= 0.0f && myHasGottenRightCannonball == false && myHasGottenRightGunpowder == false && myIsFiring == false && myIsReady == false)
         {
+            myIsReady = true;
             myAnimator.SetBool("IsReloading", true);
         }
     }
@@ -165,6 +162,6 @@ public class CannonScript : MonoBehaviour
 
     internal bool GetIsReloading()
     {
-        return (myCooldownTimer > 0.0f || myFireCooldownTimer > 0.0f || myIsFiring == true || myHasGottenRightCannonball == true || myHasGottenRightGunpowder == true);
+        return (myCooldownTimer > 0.0f || myFireCooldownTimer > 0.0f || myIsFiring == true || myHasGottenRightCannonball == true || myHasGottenRightGunpowder == true || myIsReady == true);
     }
 }
