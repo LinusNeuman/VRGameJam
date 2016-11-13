@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.16401935, g: 0.19166377, b: 0.21604952, a: 1}
+  m_IndirectSpecularColor: {r: 0.2407341, g: 0.2704337, b: 0.31561148, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2413,6 +2413,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013944892272, guid: febefd7bd08334047bd06d168685801a,
+        type: 2}
+      propertyPath: myTakeHitReference
+      value: 
+      objectReference: {fileID: 2044155683}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: febefd7bd08334047bd06d168685801a, type: 2}
   m_IsPrefabParent: 0
@@ -3566,6 +3571,11 @@ Prefab:
       propertyPath: m_Name
       value: FarShip (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013944892272, guid: febefd7bd08334047bd06d168685801a,
+        type: 2}
+      propertyPath: myTakeHitReference
+      value: 
+      objectReference: {fileID: 2044155683}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: febefd7bd08334047bd06d168685801a, type: 2}
   m_IsPrefabParent: 0
@@ -3661,11 +3671,11 @@ Prefab:
     - target: {fileID: 3380982, guid: 4d293c8e162f3874b982baadd71153d2, type: 2}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1463147713}
+      objectReference: {fileID: 1433076797}
     - target: {fileID: 2348914, guid: 4d293c8e162f3874b982baadd71153d2, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 835592130}
+      objectReference: {fileID: 1871559018}
     - target: {fileID: 420908, guid: 4d293c8e162f3874b982baadd71153d2, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
@@ -4008,35 +4018,6 @@ MonoBehaviour:
   myCloseTimer: 0
   myKick: 1
   myKickAmount: -17
---- !u!21 &835592130
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Sprites/Default
-  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-    - first:
-        name: _MainTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - first:
-        name: PixelSnap
-      second: 0
-    m_Colors:
-    - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &876931863
 GameObject:
   m_ObjectHideFlags: 0
@@ -4094,8 +4075,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 876931863}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.713, y: -1.24, z: 0}
+  m_LocalRotation: {x: 0.08365637, y: 0.20126931, z: 0.017253751, w: -0.9758046}
+  m_LocalPosition: {x: 1.5397115, y: -3.3467634, z: -4.8145294}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -4318,6 +4299,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 372.42
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013944892272, guid: febefd7bd08334047bd06d168685801a,
+        type: 2}
+      propertyPath: myTakeHitReference
+      value: 
+      objectReference: {fileID: 2044155683}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: febefd7bd08334047bd06d168685801a, type: 2}
   m_IsPrefabParent: 0
@@ -5895,6 +5881,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013944892272, guid: febefd7bd08334047bd06d168685801a,
+        type: 2}
+      propertyPath: myTakeHitReference
+      value: 
+      objectReference: {fileID: 2044155683}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: febefd7bd08334047bd06d168685801a, type: 2}
   m_IsPrefabParent: 0
@@ -6035,7 +6026,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7e9826b9bafd19346b5d8dc833fa3713, type: 2}
   m_IsPrefabParent: 0
---- !u!43 &1463147713
+--- !u!43 &1433076797
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -6675,6 +6666,11 @@ Prefab:
       propertyPath: m_Name
       value: FarShip (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013944892272, guid: febefd7bd08334047bd06d168685801a,
+        type: 2}
+      propertyPath: myTakeHitReference
+      value: 
+      objectReference: {fileID: 2044155683}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: febefd7bd08334047bd06d168685801a, type: 2}
   m_IsPrefabParent: 0
@@ -7247,6 +7243,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myMaxWaveAmount: 2
+--- !u!114 &1671942255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1671942253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715fab8b4a9a7c343a58c2f0f51056a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myFireCooldown: 30
+  myFireRandomAmount: 10
+  myTakeHitReference: {fileID: 2044155683}
 --- !u!1001 &1677102082
 Prefab:
   m_ObjectHideFlags: 0
@@ -7352,6 +7362,11 @@ Prefab:
       propertyPath: m_Name
       value: FarShip (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013944892272, guid: febefd7bd08334047bd06d168685801a,
+        type: 2}
+      propertyPath: myTakeHitReference
+      value: 
+      objectReference: {fileID: 2044155683}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: febefd7bd08334047bd06d168685801a, type: 2}
   m_IsPrefabParent: 0
@@ -8081,6 +8096,35 @@ Transform:
   m_PrefabParentObject: {fileID: 4000012693909066, guid: 897dab92108f77440ae1928a8b2aff58,
     type: 2}
   m_PrefabInternal: {fileID: 1849635905}
+--- !u!21 &1871559018
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Sprites/Default
+  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: PixelSnap
+      second: 0
+    m_Colors:
+    - first:
+        name: _Color
+      second: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1899216660 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000010742811244, guid: d716bb4af8497b641bbc8e6e3e74bb64,
@@ -8561,6 +8605,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013944892272, guid: febefd7bd08334047bd06d168685801a,
+        type: 2}
+      propertyPath: myTakeHitReference
+      value: 
+      objectReference: {fileID: 2044155683}
     - target: {fileID: 1000012159689246, guid: febefd7bd08334047bd06d168685801a, type: 2}
       propertyPath: m_Name
       value: FarShip (5)
@@ -8634,6 +8683,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2044155681}
   - 114: {fileID: 2044155682}
+  - 114: {fileID: 2044155683}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Untagged
@@ -8682,6 +8732,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myMaxWaveAmount: 2
+--- !u!114 &2044155683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2044155680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20ca7287e5b45aa44a8d198e1a770c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  magnitude: 1
+  shakeTimeMin: 0.1
+  shakeTimeMax: 0.2
+  shaking: 0
 --- !u!1 &2046503200
 GameObject:
   m_ObjectHideFlags: 0

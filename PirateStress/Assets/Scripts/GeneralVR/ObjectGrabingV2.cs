@@ -92,14 +92,13 @@ public abstract class ObjectGrabingV2 : HandInteractionBase<ObjectGrabingV2>
 
             doorPos.y = 0;
             handPos.y = 0;
-
             Vector3 difference = handPos - doorPos;
             Vector3 unit = difference.normalized;
             float dot = Vector3.Dot(unit, Vector3.forward);
 
+            float rotation = Mathf.Atan2(unit.x, unit.z);
+            _State.ObjectInHand.transform.localRotation = Quaternion.Euler(0, rotation * (180.0f / Mathf.PI), 0);
             _State.ObjectInHand.transform.localRotation = Quaternion.Euler(0, dot * 180.0f, 0);
-
-            //_State.ObjectInHand.AddRelativeTorque(0, (_State.CurrentVelocity.z + _State.CurrentVelocity.z) * 100.0f, 0, ForceMode.Force);
             
             return;
         }
