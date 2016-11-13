@@ -30,7 +30,7 @@ public class takeHit : MonoBehaviour
         delay = 0.0f;
         originalRotation = gameObject.transform.rotation;
         shakeTimeGoal = Random.Range(shakeTimeMin, shakeTimeMax);
-        GetComponent<waveSimulation>().Pause();
+        //GetComponent<waveSimulation>().Pause();
     }
 
 	// Use this for initialization
@@ -74,7 +74,7 @@ public class takeHit : MonoBehaviour
                     shakeRamp -= Time.deltaTime * (shakeTimeGoal / 2);
                 }
 
-                gameObject.transform.rotation = Quaternion.Euler(newShake);
+                gameObject.transform.rotation *= Quaternion.Euler(newShake);
 
                 shakeTimer += Time.deltaTime;
 
