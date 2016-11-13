@@ -7,29 +7,96 @@ public class CannonScript : MonoBehaviour
     private Animator myAnimator;
     private Rigidbody myCannonShot;
     private float myCooldownTimer = 0;
+    private float myFireCooldownTimer = 0;
+
+    private bool myIsReady = false;
+
+    private GunpowderLogic.ePowderType myWishedPowderType;
+    private CannonballLogic.eCannonballType myWishedCannonballType;
 
     void Awake()
     {
         myAnimator = GetComponent<Animator>();
+
+        myWishedPowderType = GenerateWishedGunpowder();
+        myWishedCannonballType = GenerateWishedCannonball();
+    }
+
+    GunpowderLogic.ePowderType GetWishedGunpowder()
+    {
+        return myWishedPowderType;
+    }
+
+    CannonballLogic.eCannonballType GetWishedCannonball()
+    {
+        return myWishedCannonballType;
+    }
+
+    GunpowderLogic.ePowderType GenerateWishedGunpowder()
+    {
+        if (UnityEngine.Random.Range(0, 1) == 0)
+        {
+            return GunpowderLogic.ePowderType.Normal;
+        }
+        else
+        {
+            return GunpowderLogic.ePowderType.HighExplosive;
+        }
+    }
+
+    CannonballLogic.eCannonballType GenerateWishedCannonball()
+    {
+        if (UnityEngine.Random.Range(0, 1) == 0)
+        {
+            return CannonballLogic.eCannonballType.Cannonball;
+        }
+        else
+        {
+            return CannonballLogic.eCannonballType.Grapeshot;
+        }
     }
 
     void Update()
     {
         myCooldownTimer -= Time.deltaTime;
         myCooldownTimer = Mathf.Max(0, myCooldownTimer);
+        if (myCooldownTimer <= 0 && myIsReady == false)
+        {
+            if (myFireCooldownTimer == 0)
+            {
+                myFireCooldownTimer = 2.0f;
+            }
+            myFireCooldownTimer -= Time.deltaTime;
+            myFireCooldownTimer = Mathf.Max(0, myFireCooldownTimer);
+
+            if (myFireCooldownTimer <= 1.0f)
+            {
+                Fire();
+            }
+
+            if (myFireCooldownTimer <= 0.0f)
+            {
+                myIsReady = true;
+            }
+        }
+    }
+
+    public void Fire()
+    {
+        if (myCannonShot != null)
+        {
+            myCannonShot.AddForce(-32, 0, 0, ForceMode.Impulse);
+            myCannonShot = null;
+        }
     }
 
     public void Reload()
     {
-        if (myCooldownTimer > 0.0f)
+        if (myCooldownTimer > 0.0f || myFireCooldownTimer > 0.0f)
         {
             return;
         }
 
-        if (myCannonShot != null)
-        {
-            myCannonShot.AddForce(-32, 0, 0, ForceMode.Impulse);
-        }
         myAnimator.SetBool("IsReloading", true);
     }
 
@@ -37,6 +104,10 @@ public class CannonScript : MonoBehaviour
     {
         myCannonShot = aCollider.GetComponent<Rigidbody>();
         myCooldownTimer = 5.5f;
+
+        myIsReady = false;
+
+
         myAnimator.SetBool("IsReloading", false);
     }
 

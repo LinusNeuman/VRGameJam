@@ -61,7 +61,7 @@ public abstract class ObjectGrabingV2 : HandInteractionBase<ObjectGrabingV2>
         Trans = transform;
         UpdateVelocity();
     }
-    void Update()
+    void FixedUpdate()
     {
         if (_State.ObjectInHand != null)
         {
@@ -84,8 +84,19 @@ public abstract class ObjectGrabingV2 : HandInteractionBase<ObjectGrabingV2>
     {
         // This dublicated the native child - parent behaviour in Unity, without scaling
         var parentMatrix = Matrix4x4.TRS(Trans.position, Trans.rotation, Trans.lossyScale);
-        _State.ObjectInHandTrans.position = parentMatrix.MultiplyPoint3x4(_State.HoldPosOffset);
-        _State.ObjectInHandTrans.rotation = (Trans.rotation * Quaternion.Inverse(_State.ParentStartRot)) * _State.HoldRotOffset;
+
+        if (_State.ObjectInHand.tag == "Door" || _State.ObjectInHand.tag == "Chest")
+        {
+            _State.ObjectInHand.AddRelativeTorque(0, _State.CurrentVelocity.magnitude / 100.0f, 0, ForceMode.Force);
+
+            return;
+        }
+
+        _State.ObjectInHand.position = (parentMatrix.MultiplyPoint3x4(_State.HoldPosOffset));
+        _State.ObjectInHand.rotation = ((Trans.rotation * Quaternion.Inverse(_State.ParentStartRot)) * _State.HoldRotOffset);
+
+        //_State.ObjectInHandTrans.position = parentMatrix.MultiplyPoint3x4(_State.HoldPosOffset);
+        //_State.ObjectInHandTrans.rotation = (Trans.rotation * Quaternion.Inverse(_State.ParentStartRot)) * _State.HoldRotOffset;
     }
 
     private void UpdateVelocity()
@@ -183,7 +194,7 @@ public abstract class ObjectGrabingV2 : HandInteractionBase<ObjectGrabingV2>
         if (_State.ObjectInHand != null)
             DropObject();
 
-        grabbedBody.isKinematic = true;
+        //grabbedBody.isKinematic = true;
 
         var oldParent = grabbedBody.transform.parent;
         grabbedBody.transform.parent = Trans;
