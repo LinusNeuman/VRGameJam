@@ -60,18 +60,18 @@ public class takeHit : MonoBehaviour
                 newShake.y = Random.Range(-magnitude, magnitude) * shakeRamp;
                 newShake.z = Random.Range(-magnitude, magnitude) * shakeRamp;
 
-                if(shakeRamp >= 0.75f)
+                if(shakeRamp >= shakeTimeGoal / 2)
                 {
                     shakeRampUp = false;
                 }
 
                 if(shakeRampUp == true)
                 {
-                    shakeRamp += Time.deltaTime * 0.75f;
+                    shakeRamp += Time.deltaTime * (shakeTimeGoal / 2);
                 }
                 else
                 {
-                    shakeRamp -= Time.deltaTime * 0.75f;
+                    shakeRamp -= Time.deltaTime * (shakeTimeGoal / 2);
                 }
 
                 gameObject.transform.rotation = Quaternion.Euler(newShake);
