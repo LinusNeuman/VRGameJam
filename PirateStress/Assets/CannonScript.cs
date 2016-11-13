@@ -14,6 +14,9 @@ public class CannonScript : MonoBehaviour
     private GunpowderLogic.ePowderType myWishedPowderType;
     private CannonballLogic.eCannonballType myWishedCannonballType;
 
+    private bool myHasGottenRightGunpowder = false;
+    private bool myHasGottenRightCannonball = false;
+
     void Awake()
     {
         myAnimator = GetComponent<Animator>();
@@ -69,11 +72,6 @@ public class CannonScript : MonoBehaviour
             myFireCooldownTimer -= Time.deltaTime;
             myFireCooldownTimer = Mathf.Max(0, myFireCooldownTimer);
 
-            if (myFireCooldownTimer <= 1.0f)
-            {
-                Fire();
-            }
-
             if (myFireCooldownTimer <= 0.0f)
             {
                 myIsReady = true;
@@ -102,9 +100,13 @@ public class CannonScript : MonoBehaviour
 
     public void Shot(Collider aCollider)
     {
-        myCannonShot = aCollider.GetComponent<Rigidbody>();
-        myCooldownTimer = 5.5f;
-        myAnimator.SetBool("IsReloading", false);
+        if(aCollider.GetComponent<CannonballLogic>().GetCannonballType() == myWishedCannonballType)
+        {
+            myHasGottenRightCannonball = true;
+            myCannonShot = aCollider.GetComponent<Rigidbody>();
+            myCooldownTimer = 5.5f;
+            myAnimator.SetBool("IsReloading", false);
+        }
     }
 
     internal bool GetIsReloading()
