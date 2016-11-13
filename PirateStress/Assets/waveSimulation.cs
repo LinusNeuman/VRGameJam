@@ -5,13 +5,24 @@ public class waveSimulation : MonoBehaviour {
     [SerializeField]
     private float myMaxWaveAmount;
 
+    private bool paused;
     private Vector3 goals;
     private Vector3 newGoals;
     private Vector3 current;
 
+    public void Pause()
+    {
+        paused = true;
+    }
+    public void Unpause()
+    {
+        paused = false;
+    }
+
 	// Use this for initialization
 	void Start ()
     {
+        paused = false;
         current.x = 0.0f;
         current.y = 0.0f;
         current.z = 0.0f;
@@ -28,26 +39,29 @@ public class waveSimulation : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        for (int i = 0; i < 3; ++i)
+        if (paused == false)
         {
-            if (goals[i] != newGoals[i])
+            for (int i = 0; i < 3; ++i)
             {
-                goals[i] += (newGoals[i] - goals[i]) * Time.deltaTime;
-            }
-
-            current[i] += goals[i] * Time.deltaTime;
-
-            if ((goals[i] > 0.0f && current[i] >= goals[i]) || ((goals[i] < 0.0f && current[i] <= goals[i])))
-            {
-                newGoals[i] = 0.0f;
-
-                while (newGoals[i] == 0.0f)
+                if (goals[i] != newGoals[i])
                 {
-                    newGoals[i] = Random.Range(-myMaxWaveAmount, myMaxWaveAmount);
+                    goals[i] += (newGoals[i] - goals[i]) * Time.deltaTime;
+                }
+
+                current[i] += goals[i] * Time.deltaTime;
+
+                if ((goals[i] > 0.0f && current[i] >= goals[i]) || ((goals[i] < 0.0f && current[i] <= goals[i])))
+                {
+                    newGoals[i] = 0.0f;
+
+                    while (newGoals[i] == 0.0f)
+                    {
+                        newGoals[i] = Random.Range(-myMaxWaveAmount, myMaxWaveAmount);
+                    }
                 }
             }
-        }
 
-        //gameObject.transform.rotation = Quaternion.Euler(current);
+            //gameObject.transform.rotation = Quaternion.Euler(current);
+        }
 	}
 }

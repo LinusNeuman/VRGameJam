@@ -91,8 +91,11 @@ public class CannonScript : MonoBehaviour
                 if (myCannonShot != null)
                 {
                     transform.FindChild("CannonBase").FindChild("CannonGun").FindChild("CannonLighter").FindChild("FuseParticle").GetComponent<ParticleSystem>().Stop();
+                    transform.FindChild("CannonBase").FindChild("CannonGun").FindChild("CannonLighter").GetComponent<AudioSource>().Stop();
 
                     transform.FindChild("SoundEffect").GetComponent<AudioSource>().Play();
+
+                    transform.FindChild("CannonBase").FindChild("CannonGun").FindChild("Smoke Particle").GetComponent<ParticleSystem>().Play();
 
                     myCannonShot.AddForce(-40, 0, 0, ForceMode.Impulse);
                     myCannonShot = null;
@@ -108,7 +111,7 @@ public class CannonScript : MonoBehaviour
                     myFireCooldownTimer = 0;
                 }
                 myIsFiring = false;
-                myIsReady = false;
+                myIsReady = true;
             }
         }
     }
@@ -129,7 +132,7 @@ public class CannonScript : MonoBehaviour
 
     public void Reload()
     {
-        if (myCooldownTimer <= 0.0f && myFireCooldownTimer <= 0.0f && myHasGottenRightCannonball == false && myHasGottenRightGunpowder == false && myIsFiring == false && myIsReady == false)
+        if (myCooldownTimer <= 0.0f && myFireCooldownTimer <= 0.0f && myHasGottenRightCannonball == false && myHasGottenRightGunpowder == false && myIsFiring == false && myIsReady == true)
         {
             myIsReady = true;
             myAnimator.SetBool("IsReloading", true);
@@ -164,6 +167,6 @@ public class CannonScript : MonoBehaviour
 
     internal bool GetIsReloading()
     {
-        return (myCooldownTimer > 0.0f || myFireCooldownTimer > 0.0f || myIsFiring == true || myHasGottenRightCannonball == true || myHasGottenRightGunpowder == true || myIsReady == true);
+        return (myCooldownTimer > 0.0f || myFireCooldownTimer > 0.0f || myIsFiring == true || myHasGottenRightCannonball == true || myHasGottenRightGunpowder == true || myIsReady == false);
     }
 }

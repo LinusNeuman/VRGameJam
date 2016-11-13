@@ -8,6 +8,9 @@ public class FuseScript : MonoBehaviour {
 
     [SerializeField]
     private ParticleSystem myFuseEmitter;
+
+    [SerializeField]
+    private AudioSource myAudioSource;
 	// Use this for initialization
 	void Start () {
 	
@@ -24,6 +27,7 @@ public class FuseScript : MonoBehaviour {
         {
             if(collision.gameObject.GetComponent<torch>().GetLit() == true)
             {
+                myAudioSource.Play();
                 myFuseEmitter.Play();
                 myCannonScript.Fire();
             }
