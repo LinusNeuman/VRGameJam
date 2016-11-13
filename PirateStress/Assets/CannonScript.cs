@@ -8,9 +8,49 @@ public class CannonScript : MonoBehaviour
     private Rigidbody myCannonShot;
     private float myCooldownTimer = 0;
 
+    private GunpowderLogic.ePowderType myWishedPowderType;
+    private CannonballLogic.eCannonballType myWishedCannonballType;
+
     void Awake()
     {
         myAnimator = GetComponent<Animator>();
+
+        myWishedPowderType = GenerateWishedGunpowder();
+        myWishedCannonballType = GenerateWishedCannonball();
+    }
+
+    GunpowderLogic.ePowderType GetWishedGunpowder()
+    {
+        return myWishedPowderType;
+    }
+
+    CannonballLogic.eCannonballType GetWishedCannonball()
+    {
+        return myWishedCannonballType;
+    }
+
+    GunpowderLogic.ePowderType GenerateWishedGunpowder()
+    {
+        if (UnityEngine.Random.Range(0, 1) == 0)
+        {
+            return GunpowderLogic.ePowderType.Normal;
+        }
+        else
+        {
+            return GunpowderLogic.ePowderType.HighExplosive;
+        }
+    }
+
+    CannonballLogic.eCannonballType GenerateWishedCannonball()
+    {
+        if (UnityEngine.Random.Range(0, 1) == 0)
+        {
+            return CannonballLogic.eCannonballType.Cannonball;
+        }
+        else
+        {
+            return CannonballLogic.eCannonballType.Grapeshot;
+        }
     }
 
     void Update()
