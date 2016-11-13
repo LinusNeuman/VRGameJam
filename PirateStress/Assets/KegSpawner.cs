@@ -63,8 +63,11 @@ public class KegSpawner : MonoBehaviour {
         if(mySpawnedInstances >= 3 && myShouldAnimate == true)
         {
             mySpawnedInstances = 0;
-            myAnimatorReferenceLeft.SetBool("IsOpen", true);
-            myAnimatorReferenceRight.SetBool("IsOpen", true);
+            if (myAnimatorReferenceLeft != null)
+            {
+                myAnimatorReferenceLeft.SetBool("IsOpen", true);
+                myAnimatorReferenceRight.SetBool("IsOpen", true);
+            }
 
             myCloseAnimationTimer = myCloseTimer;
             myIsOpen = true;

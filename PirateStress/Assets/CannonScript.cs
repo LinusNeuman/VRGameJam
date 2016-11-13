@@ -97,7 +97,7 @@ public class CannonScript : MonoBehaviour
 
                     transform.FindChild("CannonBase").FindChild("CannonGun").FindChild("Smoke Particle").GetComponent<ParticleSystem>().Play();
 
-                    myCannonShot.AddForce(-40, 0, 0, ForceMode.Impulse);
+                    myCannonShot.AddForce(-200, 10, 0, ForceMode.Impulse);
                     myCannonShot = null;
 
                     myHasGottenRightGunpowder = false;
@@ -125,7 +125,7 @@ public class CannonScript : MonoBehaviour
                 return;
             }
 
-            myFireCooldownTimer = 7.2f;
+            myFireCooldownTimer = 8.2f;
             myIsFiring = true;
         }
     }
