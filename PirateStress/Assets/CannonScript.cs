@@ -25,6 +25,15 @@ public class CannonScript : MonoBehaviour
         myWishedCannonballType = GenerateWishedCannonball();
     }
 
+    public bool GetHasBall()
+    {
+        return myHasGottenRightCannonball;
+    }
+    public bool GetHasPowder()
+    {
+        return myHasGottenRightGunpowder;
+    }
+
     public GunpowderLogic.ePowderType GetWishedGunpowder()
     {
         return myWishedPowderType;

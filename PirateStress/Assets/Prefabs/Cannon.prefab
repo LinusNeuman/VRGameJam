@@ -447,13 +447,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6c5a2fae2259a4499ee5b1b0fd36eea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isWaiting: 0
   myCannonballImage: {fileID: 114000010497264448}
   myGunpowderImage: {fileID: 114000010989431166}
   cannonballSprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
   grapeshotSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  powderSprite: {fileID: 0}
-  HESprite: {fileID: 0}
+  powderSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  HESprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!114 &114000010989431166
 MonoBehaviour:
   m_ObjectHideFlags: 1

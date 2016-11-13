@@ -5,9 +5,6 @@ using System.Collections;
 public class cannonBillboard : MonoBehaviour
 {
     [SerializeField]
-    private bool isWaiting;
-
-    [SerializeField]
     private Image myCannonballImage;
 
     [SerializeField]
@@ -33,9 +30,18 @@ public class cannonBillboard : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        GetComponent<CannonScript>().Get
+        if (GetComponent<CannonScript>().GetHasBall() == true)
+        {
+            Color col;
 
-        if(isWaiting == true)
+            col.r = 0.0f;
+            col.g = 0.0f;
+            col.b = 0.0f;
+            col.a = 0.0f;
+
+            myCannonballImage.color = col;
+        }
+        else
         {
             Color col;
 
@@ -56,6 +62,29 @@ public class cannonBillboard : MonoBehaviour
                     myCannonballImage.sprite = grapeshotSprite;
                     break;
             }
+        }
+
+        if (GetComponent<CannonScript>().GetHasPowder() == true)
+        {
+            Color col;
+
+            col.r = 0.0f;
+            col.g = 0.0f;
+            col.b = 0.0f;
+            col.a = 0.0f;
+
+            myGunpowderImage.color = col;
+        }
+        else
+        {
+            Color col;
+
+            col.r = 255.0f;
+            col.g = 255.0f;
+            col.b = 255.0f;
+            col.a = 255.0f;
+
+            myGunpowderImage.color = col;
 
             switch(GetComponent<CannonScript>().GetWishedGunpowder())
             {
@@ -67,17 +96,6 @@ public class cannonBillboard : MonoBehaviour
                     myGunpowderImage.sprite = HESprite;
                     break;
             }
-        }
-        else if(isWaiting == false)
-        {
-            Color col;
-
-            col.r = 0.0f;
-            col.g = 0.0f;
-            col.b = 0.0f;
-            col.a = 125.0f;
-
-            myCannonballImage.color = col;
         }
 	}
 }
