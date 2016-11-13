@@ -20,15 +20,15 @@ public class takeHit : MonoBehaviour
     public void Activate()
     {
         shaking = true;
+        originalRotation = gameObject.transform.rotation;
+        shakeTimeGoal = Random.Range(shakeTimeMin, shakeTimeMax);
+        GetComponent<waveSimulation>().Pause();
     }
 
 	// Use this for initialization
 	void Start ()
     {
         shaking = false;
-        originalRotation = gameObject.transform.rotation;
-        shakeTimeGoal = Random.Range(shakeTimeMin, shakeTimeMax);
-        GetComponent<waveSimulation>().Pause();
 	}
 	
 	// Update is called once per frame

@@ -61,7 +61,7 @@ public class waveSimulation : MonoBehaviour {
                 }
             }
 
-            //gameObject.transform.rotation = Quaternion.Euler(current);
+            gameObject.transform.rotation = Quaternion.Euler(current);
         }
 	}
 }

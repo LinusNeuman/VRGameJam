@@ -11,6 +11,9 @@ public class DistantShipFire : MonoBehaviour {
     private float myFireRandomAmount = 0.0f;
 
     private float myFireMaxTime = 0.0f;
+
+    [SerializeField]
+    private takeHit myTakeHitReference;
 	// Use this for initialization
 	void Start () {
         myFireMaxTime = Random.Range(myFireCooldown - myFireRandomAmount, myFireCooldown + myFireRandomAmount);
@@ -33,5 +36,11 @@ public class DistantShipFire : MonoBehaviour {
     void Fire()
     {
         transform.FindChild("SoundEffects").GetComponent<AudioSource>().Play();
+
+        int chanceOfHit = Random.Range(0, 100);
+       // if(chanceOfHit <= 15)
+       // {
+            myTakeHitReference.Activate();
+       // }
     }
 }
