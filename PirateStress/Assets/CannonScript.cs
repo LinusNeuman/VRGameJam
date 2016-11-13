@@ -37,7 +37,7 @@ public class CannonScript : MonoBehaviour
 
     GunpowderLogic.ePowderType GenerateWishedGunpowder()
     {
-        if (UnityEngine.Random.Range(0, 1) == 0)
+        if (UnityEngine.Random.Range(0, 20) >= 10)
         {
             return GunpowderLogic.ePowderType.Normal;
         }
@@ -49,7 +49,7 @@ public class CannonScript : MonoBehaviour
 
     CannonballLogic.eCannonballType GenerateWishedCannonball()
     {
-        if (UnityEngine.Random.Range(0, 1) == 0)
+        if (UnityEngine.Random.Range(0, 20) >= 10)
         {
             return CannonballLogic.eCannonballType.Cannonball;
         }

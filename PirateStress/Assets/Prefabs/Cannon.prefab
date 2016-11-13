@@ -93,6 +93,8 @@ GameObject:
   - 4: {fileID: 4000012638886608}
   - 33: {fileID: 33000010890388998}
   - 23: {fileID: 23000013438781114}
+  - 65: {fileID: 65000012897935020}
+  - 114: {fileID: 114000010483686368}
   m_Layer: 0
   m_Name: CannonLighter
   m_TagString: Untagged
@@ -141,7 +143,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013836526382}
   - 95: {fileID: 95000011411123360}
-  - 114: {fileID: 114000012631823354}
+  - 114: {fileID: 114000012289772952}
   m_Layer: 0
   m_Name: Cannon
   m_TagString: Cannon
@@ -210,7 +212,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014012917524}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.4082441, y: 0.437, z: -2.006}
+  m_LocalPosition: {x: -3.469, y: 0.427, z: 1.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -353,6 +355,18 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 358c3e6a9edb159468c13d2b39f95e5d, type: 3}
+--- !u!65 &65000012897935020
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012179498182}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.08146728, y: 0.11621704, z: 0.033052675}
+  m_Center: {x: 0.015465817, y: 0.0052896924, z: 0.00000012200326}
 --- !u!95 &95000011411123360
 Animator:
   serializedVersion: 3
@@ -391,6 +405,18 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114000010483686368
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012179498182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c223e7d766b3e0429006d8d4e1c4bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myCannonScript: {fileID: 114000012289772952}
 --- !u!114 &114000010989431166
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -429,8 +455,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fdee56f82b46324d9c65bc14fad6fc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myCannonScript: {fileID: 114000012631823354}
---- !u!114 &114000012631823354
+  myCannonScript: {fileID: 114000012289772952}
+--- !u!114 &114000012289772952
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

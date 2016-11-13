@@ -5,6 +5,10 @@ public class AnimatedTorch : MonoBehaviour {
 
     [SerializeField]
     private float myFlickerAmount;
+
+    [SerializeField]
+    private float myStartAmount;
+
     [SerializeField]
     private Light myLight;
     private float myLightGoal;
@@ -12,14 +16,14 @@ public class AnimatedTorch : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        myLightGoal = Random.Range(1.0f, 2.25f);
-        myLight.intensity = .75f;
+        myLightGoal = Random.Range(1.25f, 2.25f);
+        myLight.intensity = myStartAmount;
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        if (myLight.intensity < myLightGoal)
+        if (myLight.intensity < myStartAmount + myLightGoal)
         {
             myLight.intensity += Time.deltaTime * myFlickerAmount;
         }
@@ -30,7 +34,7 @@ public class AnimatedTorch : MonoBehaviour {
 
         if(Random.Range(0.0f, 100.0f) < 50.0f)
         {
-            myLightGoal = Random.Range(1.0f, 2.25f);
+            myLightGoal = Random.Range(1.25f, 2.25f);
         }
 	}
 }

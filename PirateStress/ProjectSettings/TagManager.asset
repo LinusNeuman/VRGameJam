@@ -9,6 +9,7 @@ TagManager:
   - Cannon
   - Lighter
   - Torch
+  - Door
   layers:
   - Default
   - TransparentFX
