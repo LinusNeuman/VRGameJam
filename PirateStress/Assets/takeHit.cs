@@ -13,7 +13,10 @@ public class takeHit : MonoBehaviour
 
     [SerializeField]
     private bool shaking;
+    private bool playSound;
+    private bool shakeRampUp;
     private float delay;
+    private float shakeRamp;
     private float shakeTimer;
     private float shakeTimeGoal;
     private Quaternion originalRotation;
@@ -21,6 +24,9 @@ public class takeHit : MonoBehaviour
     public void Activate()
     {
         shaking = true;
+        playSound = true;
+        shakeRampUp = true;
+        shakeRamp = 0.0f;
         delay = 0.0f;
         originalRotation = gameObject.transform.rotation;
         shakeTimeGoal = Random.Range(shakeTimeMin, shakeTimeMax);
@@ -31,6 +37,7 @@ public class takeHit : MonoBehaviour
 	void Start ()
     {
         shaking = false;
+        playSound = true;
 	}
 	
 	// Update is called once per frame
@@ -40,11 +47,32 @@ public class takeHit : MonoBehaviour
         {
             if (delay >= 1.5f)
             {
+                if(playSound == true)
+                {
+                    playSound = false;
+                    GetComponent<AudioSource>().pitch = Random.Range(0.5f, 1.5f);
+                    GetComponent<AudioSource>().Play();
+                }
+
                 Vector3 newShake;
 
-                newShake.x = Random.Range(-magnitude, magnitude);
-                newShake.y = Random.Range(-magnitude, magnitude);
-                newShake.z = Random.Range(-magnitude, magnitude);
+                newShake.x = Random.Range(-magnitude, magnitude) * shakeRamp;
+                newShake.y = Random.Range(-magnitude, magnitude) * shakeRamp;
+                newShake.z = Random.Range(-magnitude, magnitude) * shakeRamp;
+
+                if(shakeRamp >= 0.75f)
+                {
+                    shakeRampUp = false;
+                }
+
+                if(shakeRampUp == true)
+                {
+                    shakeRamp += Time.deltaTime * 0.75f;
+                }
+                else
+                {
+                    shakeRamp -= Time.deltaTime * 0.75f;
+                }
 
                 gameObject.transform.rotation = Quaternion.Euler(newShake);
 
@@ -56,8 +84,6 @@ public class takeHit : MonoBehaviour
                     shaking = false;
                     shakeTimer = 0.0f;
                     GetComponent<waveSimulation>().Unpause();
-                    GetComponent<AudioSource>().pitch = Random.Range(0.5f, 1.5f);
-                    GetComponent<AudioSource>().Play();
                 }
             }
             else
