@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 7438fdc815518394d82ebaab8e1026fe
-timeCreated: 1478983085
+timeCreated: 1479039559
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: StaticEnviro2
+    4300000: StaticEnviro3
     9500000: //RootNode
   materials:
     importMaterials: 1
