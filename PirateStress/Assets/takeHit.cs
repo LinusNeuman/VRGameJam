@@ -52,6 +52,8 @@ public class takeHit : MonoBehaviour
                 shaking = false;
                 shakeTimer = 0.0f;
                 GetComponent<waveSimulation>().Unpause();
+                GetComponent<AudioSource>().pitch = Random.Range(0.5f, 1.5f);
+                GetComponent<AudioSource>().Play();
             }
         }
     }
