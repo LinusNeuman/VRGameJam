@@ -83,8 +83,19 @@ public class CannonScript : MonoBehaviour
     {
         if (myCannonShot != null)
         {
-            myCannonShot.AddForce(-32, 0, 0, ForceMode.Impulse);
-            myCannonShot = null;
+            if(myHasGottenRightCannonball == false || myHasGottenRightGunpowder == false)
+            {
+                return;
+            }
+
+            if (myCooldownTimer <= 0)
+            {
+                myCannonShot.AddForce(-40, 0, 0, ForceMode.Impulse);
+                myCannonShot = null;
+
+                myHasGottenRightGunpowder = false;
+                myHasGottenRightCannonball = false;
+            }
         }
     }
 
@@ -106,6 +117,7 @@ public class CannonScript : MonoBehaviour
             myCannonShot = aCollider.GetComponent<Rigidbody>();
             myCooldownTimer = 5.5f;
             myAnimator.SetBool("IsReloading", false);
+            myIsReady = false;
         }
     }
 
